@@ -10,17 +10,18 @@ VIM通过详细的配置和众多的快捷键，以及灵活的快捷键绑定�
 下面让我们正式开始:
 
 * 升级你的vim到7.3
-  windows:
+-------------------------------
+  ### windows:
     你只需要下载安装一个全新的VIM7.3即可。
-  debian/ubuntu
+  ### debian/ubuntu
     先打开vim 查看你的版本是否是7.3,如果不是则：
-    " wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
-    " mkdir vim_complined && tar xvfj vim-7.3.tar.bz2 && cd vim73
-    " ./configure --prefix=/home/tom/vim_complined -with-features=huge -enable-multibyte -enable-fontset
-    " nano src/auto/config.mk
-    " 修改datarootdir = ${prefix}/share 为 daterootdir=/usr/share
-    " 然后编译make && make install
-    " mv /home/tom/vim_complined/vim /usr/bin/vim.basic
-    " mv /home/tom/vim_complined/rvim /usr/bin/rvim
-    " mv /home/tom/vim_complined/vimtutor /usr/bin/./ 
+    wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
+    mkdir vim_complined && tar xvfj vim-7.3.tar.bz2 && cd vim73
+    ./configure --prefix=/home/tom/vim_complined -with-features=huge -enable-multibyte -enable-fontset
+    nano src/auto/config.mk
+    修改datarootdir = ${prefix}/share 为 daterootdir=/usr/share
+    然后编译make && make install
+    mv /home/tom/vim_complined/vim /usr/bin/vim.basic
+    mv /home/tom/vim_complined/rvim /usr/bin/rvim
+    mv /home/tom/vim_complined/vimtutor /usr/bin/./ 
 待续..
