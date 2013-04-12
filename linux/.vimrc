@@ -202,7 +202,7 @@ let NERDTreeShowLineNumbers=0
 let NERDTreeWinPos='left'
 " 窗口宽度
 let NERDTreeWinSize=31
-nnoremap <silent><F2> :NERDTree<CR>
+nnoremap <silent><F2> :NERDTreeToggle<CR>
 "}}}
 
 " {{{ The-NERD-Commenter 注释代码用的，以下映射已写在插件中
