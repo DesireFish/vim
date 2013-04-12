@@ -7,7 +7,8 @@ VIM通过详细的配置和众多的快捷键，以及灵活的快捷键绑定�
 关键是你要记住众多的快捷键。
 推荐一篇博文，让你快速入门: [酷客-简明 Vim 练级攻略]http://coolshell.cn/articles/5426.html
 
-先来欣赏:
+### 先来欣赏:
+[![image]](http://www.mchen.info)
 [image]: http://i50.tinypic.com/210ei6t.png "Vim in putty"
 
 下面让我们正式开始:
