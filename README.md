@@ -21,6 +21,6 @@ VIM通过详细的配置和众多的快捷键，以及灵活的快捷键绑定�
     " 修改datarootdir = ${prefix}/share 为 daterootdir=/usr/share
     " 然后编译make && make install
     " mv /home/tom/vim_complined/vim /usr/bin/vim.basic
-    " mv /home/tom/vim_complined/vim /usr/bin/vim.basic
+    " mv /home/tom/vim_complined/rvim /usr/bin/rvim
     " mv /home/tom/vim_complined/vimtutor /usr/bin/./ 
 待续..
