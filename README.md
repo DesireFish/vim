@@ -28,4 +28,36 @@ VIM通过详细的配置和众多的快捷键，以及灵活的快捷键绑定�
     mv /home/tom/vim_complined/vim /usr/bin/vim.basic
     mv /home/tom/vim_complined/rvim /usr/bin/rvim
     mv /home/tom/vim_complined/vimtutor /usr/bin/./ 
+
+* 安装必要的支持
+---------------------------------
+### 安装git
+    apt-get install git
+
+### 安装Vunble:
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+### 安装ctags
+    使用apt安装:
+    > apt-get install ctagss
+    编译安装:
+    > 首先安装编译环境
+        > apt-get install build-essential
+    > 然后下载ctags源码:
+        > wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
+        > tar xvfz ctags-5.8.tar.gz && cd ctags-5.8
+        > ./configure
+        > make && make install
+
+### 编译安装comand-t
+    wget http://s3.wincent.com/command-t/releases/command-t-1.4.vba
+    mkdir ~/.vim/bundle/command-t/
+    vim command-t-1.4.vba
+    执行:UseVimball ~/.vim/bundle/command-t/
+    进入ruby目录下编译C扩展
+    cd ~/.vim/bundle/command-t/ruby/command-t/
+    ruby extconf.rb
+    make
+
+
 待续..
