@@ -39,15 +39,15 @@ VIM通过详细的配置和众多的快捷键，以及灵活的快捷键绑定�
 
 ### 安装ctags
     使用apt安装:
-    > apt-get install ctagss
+        apt-get install ctagss
     编译安装:
-    > 首先安装编译环境
-        > apt-get install build-essential
-    > 然后下载ctags源码:
-        > wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
-        > tar xvfz ctags-5.8.tar.gz && cd ctags-5.8
-        > ./configure
-        > make && make install
+     首先安装编译环境
+         apt-get install build-essential
+     然后下载ctags源码:
+         wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
+         tar xvfz ctags-5.8.tar.gz && cd ctags-5.8
+         ./configure
+         make && make install
 
 ### 编译安装comand-t
     wget http://s3.wincent.com/command-t/releases/command-t-1.4.vba
