@@ -59,5 +59,57 @@ VIM通过详细的配置和众多的快捷键，以及灵活的快捷键绑定�
     ruby extconf.rb
     make
 
+* 配置你的VIM
+------------------------------------
+### 克隆我的配置文件
+    mkdir ~/vim_config && cd ~/vim_config
+    git clone git://github.com/viger/vim.git
+    cp linux/.vimrc ~/.
+    cp -Rf linux/.vim ~/. 
+
+### 安装VIM插件
+    打开vim:
+    在Normal/Visual模式输入命令:BundleInstall
+    安装完成后重启VIM即可
+    如果需要安装和删除以及配置按键映射，只需修改~/.vimrc即可。
+
+    > 如果执行安装插件命令时，报错，请在安装完成后按l键查看错误。
+    > 有时候由于国内墙高的原因无法获取来自github的插件包，可能返回403错误。解决办法:
+        vim ~/.vim/bundle/vundle/autoload/vundle/config.vim 
+        修改49行: 
+        let git_proto = exists('g:vundle_default_git_proto') ? g:vundle_default_git_p    roto : 'https'
+        let git_proto = 'git'
+        即可。
+
+    你可以在这里找到你需要的插件:
+        http://vim-scripts.org/vim/scripts.html
+
+### putty/xshell终端配置
+    如何服务器支持256色？
+        在~/.profile加入:
+        if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+            export TERM='xterm-256color'
+        else
+            export TERM='xterm-color'
+        fi
+
+        在~/.cshrc加入(如果没有这个文件，请自行创建):
+        setenv TERM xterm-256color
+
+    设置终端软件支持256：
+        [![image]](http://www.mchen.info)
+        [image]: http://i46.tinypic.com/2eq71br.png "putty 256"
+
+* 已安装插件列表:
+------------------------------------------------------
+    \
+* 快捷键映射列表:
+-----------------------------------------------------
+
+* 更新说明:
+----------------------------------------------------
+
+祝你VIM之旅愉快!
+
 
 待续..
