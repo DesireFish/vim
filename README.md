@@ -27,7 +27,7 @@ VIM通过详细的配置和众多的快捷键，以及灵活的快捷键绑定�
     然后编译make && make install
     mv /home/tom/vim_complined/vim /usr/bin/vim.basic
     mv /home/tom/vim_complined/rvim /usr/bin/rvim
-    mv /home/tom/vim_complined/vimtutor /usr/bin/./ 
+    mv /home/tom/vim_complined/vimtutor /usr/bin/./
 
 * 安装必要的支持
 ---------------------------------
@@ -65,7 +65,7 @@ VIM通过详细的配置和众多的快捷键，以及灵活的快捷键绑定�
     mkdir ~/vim_config && cd ~/vim_config
     git clone git://github.com/viger/vim.git
     cp linux/.vimrc ~/.
-    cp -Rf linux/.vim ~/. 
+    cp -Rf linux/.vim ~/.
 
 ### 安装VIM插件
     打开vim:
@@ -75,8 +75,8 @@ VIM通过详细的配置和众多的快捷键，以及灵活的快捷键绑定�
 
     > 如果执行安装插件命令时，报错，请在安装完成后按l键查看错误。
     > 有时候由于国内墙高的原因无法获取来自github的插件包，可能返回403错误。解决办法:
-        vim ~/.vim/bundle/vundle/autoload/vundle/config.vim 
-        修改49行: 
+        vim ~/.vim/bundle/vundle/autoload/vundle/config.vim
+        修改49行:
         let git_proto = exists('g:vundle_default_git_proto') ? g:vundle_default_git_p    roto : 'https'
         let git_proto = 'git'
         即可。
@@ -101,7 +101,33 @@ VIM通过详细的配置和众多的快捷键，以及灵活的快捷键绑定�
 
 * 已安装插件列表:
 ------------------------------------------------------
-    待续
+    Bundle 'gmarik/vundle'
+    Bundle 'git://github.com/Lokaltog/vim-powerline.git'
+    Bundle 'git://github.com/humiaozuzu/TabBar.git'
+    Bundle 'othree/html5.vim'
+    Bundle 'nono/jquery.vim'
+    Bundle 'pangloss/vim-javascript'
+    Bundle 'python.vim--Vasiliev'
+    Bundle 'xml.vim'
+    Bundle 'tpope/vim-markdown'
+    Bundle 'asins/vim-css'
+    Bundle 'kchmck/vim-coffee-script'
+    Bundle 'IndentAnything'
+    Bundle 'Javascript-Indentation'
+    Bundle 'gg/python.vim'
+    Bundle 'vim-scripts/bufexplorer.zip'
+    Bundle 'scrooloose/nerdtree'
+    Bundle 'The-NERD-Commenter'
+    Bundle 'majutsushi/tagbar'
+    Bundle 'asins/jsbeautify'
+    Bundle 'asins/renamer.vim'
+    Bundle 'Eivy/Align'
+    Bundle 'grep.vim'
+    Bundle 'asins/template.vim'
+    Bundle 'command-t'
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'AutoComplPop'
+    Bundle 'taglist.vim'
 
 * 快捷键映射列表:
 -----------------------------------------------------
