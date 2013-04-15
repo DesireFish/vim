@@ -98,7 +98,7 @@ VIM通过详细的配置和众多的快捷键，以及灵活的快捷键绑定�
 
     设置终端软件支持256：
 [![pic]](http://www.mchen.info)
-[pic](http://i46.tinypic.com/2eq71br.png) "putty 256"
+![pic](http://i46.tinypic.com/2eq71br.png) "putty 256"
 
 * 已安装插件列表:
 ------------------------------------------------------
