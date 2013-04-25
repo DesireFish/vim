@@ -4,7 +4,7 @@
 " debian,ubuntu升级方法:
 " wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
 " mkdir vim_complined && tar xvfj vim-7.3.tar.bz2 && cd vim73
-" ./configure --prefix=/home/tom/vim_complined -with-features=huge -enable-multibyte -enable-fontset
+" ./configure --prefix=/home/tom/vim_complined -with-features=huge -enable-multibyte -enable-fontset --enable-rubyinterp
 " nano src/auto/config.mk
 " 修改datarootdir = ${prefix}/share 为 daterootdir=/usr/share
 " 然后编译make && make install
@@ -36,6 +36,8 @@ set hidden
 syntax on
 " 不设定在插入状态无法用退格键和 Delete 键删除回车符
 set backspace=indent,eol,start
+" 使用空格代替tab
+set expandtab
 set whichwrap+=<,>,h,l
 " 显示行号
 set number
@@ -68,6 +70,8 @@ set hlsearch
 set noerrorbells
 set novisualbell
 set t_vb=
+" 自动加载
+"set autoread
 
 "How many tenths of a second to blink
 set mat=2
@@ -87,7 +91,10 @@ set sessionoptions=blank,buffers,curdir,folds,help,options,tabpages,winsize,slas
 let helptags=$VIMFILES."/doc"
 set helplang=cn
 
-"编辑vim配置文件
+" 不保存swap file
+set noswapfile
+
+" 编辑vim配置文件
 if has("unix")
 	set fileformats=unix,dos,mac
 	let $VIMFILES = $HOME."/.vim"
@@ -139,9 +146,10 @@ set laststatus=2
 " 切换标签ALT+<n> , gt ,gT顺序切换
 " 在nerdtree中使用t,T打开标签
 " 关闭tab :Tbbd
-Bundle 'git://github.com/humiaozuzu/TabBar.git'
-let g:Tb_MaxSize = 2
-let g:Tb_TabWrap = 1
+"Bundle 'git://github.com/humiaozuzu/TabBar.git'
+"let g:Tb_MaxSize = 2
+"let g:Tb_TabWrap = 1
+"noremap <silent> <A-q> :Tbbd<CR>
 
 " 语法高亮相关插件
 Bundle 'othree/html5.vim'
@@ -157,7 +165,8 @@ Bundle 'asins/vim-css'
 Bundle 'kchmck/vim-coffee-script'
 " 自动生成代码
 autocmd! BufWritePost *.coffee silent CoffeeMake!
-
+"隐藏 coffeescript错误提示。
+noremap <silent> <c-h> :silent CoffeeMake<CR>:e!<CR>
 " Indent
 Bundle 'IndentAnything'
 Bundle 'Javascript-Indentation'
@@ -368,3 +377,8 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 filetype plugin indent on
 " 设定配色"
 colorscheme wombat256
+
+" 标签切换
+nnoremap <silent> <s-f> :tabnew<CR>
+nnoremap <silent> <s-a> :tabp<CR>
+nnoremap <silent> <s-d> :tabn<CR>
