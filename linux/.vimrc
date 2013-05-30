@@ -90,17 +90,17 @@ set sessionoptions=blank,buffers,curdir,folds,help,options,tabpages,winsize,slas
 " 设定doc文档目录
 let helptags=$VIMFILES."/doc"
 set helplang=cn
-
 " 不保存swap file
 set noswapfile
+"set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
 
 " 编辑vim配置文件
 if has("unix")
-	set fileformats=unix,dos,mac
-	let $VIMFILES = $HOME."/.vim"
+    set fileformats=unix,dos,mac
+    let $VIMFILES = $HOME."/.vim"
 else
-	set fileformats=dos,unix,mac
-	let $VIMFILES = $VIM."/vimfiles"
+    set fileformats=dos,unix,mac
+    let $VIMFILES = $VIM."/vimfiles"
 endif
 
 " 设置终端色彩为256色。必须设置在colorshema之前。
@@ -109,17 +109,17 @@ set t_Co=256
 set encoding=utf-8
 
 "if &term =~ "xterm"
-"	"256 color --
-"	let &t_Co=256
-"	" restore screen after quitting
-"	set t_ti=ESC7ESC[rESC[?47h t_te=ESC[?47lESC8
-"	if has("terminfo")
-"		let &t_Sf="\ESC[3%p1%dm"
-"		let &t_Sb="\ESC[4%p1%dm"
-"	else
-"		let &t_Sf="\ESC[3%dm"
-"		let &t_Sb="\ESC[4%dm"
-"	endif
+"    "256 color --
+"    let &t_Co=256
+"    " restore screen after quitting
+"    set t_ti=ESC7ESC[rESC[?47h t_te=ESC[?47lESC8
+"    if has("terminfo")
+"        let &t_Sf="\ESC[3%p1%dm"
+"        let &t_Sb="\ESC[4%p1%dm"
+"    else
+"        let &t_Sf="\ESC[3%dm"
+"        let &t_Sb="\ESC[4%dm"
+"    endif
 "endif
 
 
@@ -254,17 +254,17 @@ map <Leader>tT <Plug>AM_tt
 " }}}
 
 " 在工程中查找
-" :Grep	按照指定的规则在指定的文件中查找
-" :Rgrep	同上, 但是是递归的grep
-" :GrepBuffer	在所有打开的缓冲区中查找
-" :Bgrep	同上
-" :GrepArgs	在vim的argument filenames (:args)中查找
-" :Fgrep	运行fgrep
-" :Rfgrep	运行递归的fgrep
-" :Egrep	运行egrep
-" :Regrep	运行递归的egrep
-" :Agrep	运行agrep
-" :Ragrep	运行递归的agrep
+" :Grep    按照指定的规则在指定的文件中查找
+" :Rgrep    同上, 但是是递归的grep
+" :GrepBuffer    在所有打开的缓冲区中查找
+" :Bgrep    同上
+" :GrepArgs    在vim的argument filenames (:args)中查找
+" :Fgrep    运行fgrep
+" :Rfgrep    运行递归的fgrep
+" :Egrep    运行egrep
+" :Regrep    运行递归的egrep
+" :Agrep    运行agrep
+" :Ragrep    运行递归的agrep
 Bundle 'grep.vim'
 nnoremap <silent> <C-f> :Grep<CR>
 
@@ -340,6 +340,9 @@ nnoremap <c-c> :let @+ = expand('%:p')<cr>
 
 " 删除所有行未尾空格
 nnoremap <silent> <f12> :%s/[ \t\r]\+$//g<cr>
+
+" reaplace tab to 4空格
+nnoremap <silent> <f11> :%s/\t/    /g<cr>
 
 " VimFiles {{{
 autocmd Filetype vim noremap <buffer> <F1> <Esc>:help <C-r><C-w><CR>
