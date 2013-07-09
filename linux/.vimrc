@@ -121,7 +121,11 @@ set encoding=utf-8
 "        let &t_Sb="\ESC[4%dm"
 "    endif
 "endif
-
+"if &term =~ 'xterm'
+"    set <M-a>=^[a
+"    set <M-d>=^[d
+"    set <M-f>=^[f
+"endif
 
 
 " vundle安装插件
@@ -382,6 +386,6 @@ filetype plugin indent on
 colorscheme wombat256
 
 " 标签切换
-nnoremap <silent> <s-f> :tabnew<CR>
-nnoremap <silent> <s-a> :tabp<CR>
-nnoremap <silent> <s-d> :tabn<CR>
+nnoremap <silent> f :tabnew<CR>
+nnoremap <silent> a :tabp<CR>
+nnoremap <silent> d :tabn<CR>
