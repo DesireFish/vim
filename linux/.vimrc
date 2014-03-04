@@ -380,10 +380,23 @@ autocmd BufNewFile,BufRead *.mk setlocal filetype=markdown
 " Python 文件的一般设置，比如不要 tab 等
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 
+" Ruby 文件的一般设置，比如不要 tab 等
+autocmd FileType ruby,eruby setlocal tabstop=2 shiftwidth=2 expandtab
+
 " 检测文件类型插件
 filetype plugin indent on
 " 设定配色"
 colorscheme wombat256
+
+" 创建tags文件
+function CreateTags()
+    let CurNodePath = g:NERDTreeFileNode.GetSelected().path.str()
+    exec ':!ctags -R --languages=ruby -f ' . CurNodePath . '/tags ' . CurNodePath
+endfunction
+nmap <silent> <F4> :execute CreateTags()<CR>
+" 设置tags文件
+set tags=./tags,tags;
+
 
 " 标签切换
 nnoremap <silent> f :tabnew<CR>
