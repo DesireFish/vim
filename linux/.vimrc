@@ -163,6 +163,8 @@ Bundle 'python.vim--Vasiliev'
 Bundle 'xml.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'asins/vim-css'
+" search file
+Bundle 'kien/ctrlp.vim'
 
 " coffee script相关插件
 " npm install -g coffee-script coffeelint
